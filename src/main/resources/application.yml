@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: user-service
+
+management:
+  health:
+    mail:
+      enabled: true # When using the MailService, configure an SMTP server and set this to true
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka
+  instance:
+    hostname: localhost
